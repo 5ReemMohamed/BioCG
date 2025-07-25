@@ -174,7 +174,7 @@ body {
     bottom:0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 500px;
+    width: 250px;
     height: 4px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 2px;
@@ -189,7 +189,11 @@ body {
     animation: progressFill 30s linear forwards;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
-
+@media screen and (min-width:992px) {
+  .welcome-progress {
+    width: 500px;
+}
+}
 @keyframes progressFill {
     0% { width: 0%; }
     100% { width: 100%; }
