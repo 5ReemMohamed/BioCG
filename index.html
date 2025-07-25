@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCG - Bioconstruction Group LTD</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+     <div id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="BioCG Logo" class="company-logo">
+            </div>
+            <h1 class="company-name" data-en="Bioconstruction Group LTD" data-ar="مجموعة البناء الحيوي المحدودة">
+                Bioconstruction Group LTD
+            </h1>
+            <p class="company-tagline" data-en="Smart Infrastructure. A Human-Centered Vision." data-ar="البنية التحتية الذكية. رؤية محورها الإنسان.">
+                Smart Infrastructure. A Human-Centered Vision.
+            </p>
+        </div>
+    </div>
+      
+       <main id="mainContent" style="display: none;">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="BioCG" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto d-flex justify-content-center align-items-center gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-en="About Us" data-ar="من نحن">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-en="Our Projects" data-ar="مشاريعنا">Our Projects</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Pages" data-ar="الصفحات">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu text-center text-lg-start" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="engineeringConsulting.html" data-en="Engineering Consulting" data-ar="الاستشارات الهندسيه">Engineering Consulting</a></li>
+                            <li><a class="dropdown-item" href="courses.html" data-en="Training and courses" data-ar="التدريب والدورات">Training and courses</a></li>
+                            <li><a class="dropdown-item" href="IT&AI.html" data-en="IT, artificial intelligence, and information systems" data-ar="تكنولوجيا المعلومات والذكاء الاصطناعي ونظم المعلومات">IT, artificial intelligence, and information systems</a></li>
+                            <li><a class="dropdown-item" href="#page4" data-en="E-store" data-ar="المتجر الإلكتروني">E-store</a></li>
+                            <li><a class="dropdown-item last-child" href="cosmeticsmanufacturing.html" data-en="Cosmetics manufacturing and sales" data-ar="تصنيع وبيع مستحضرات التجميل">Cosmetics manufacturing and sales</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav mt-3 mt-lg-0">
+                    <button class="btn btn-outline-light translate-btn btn-sm me-2" onclick="toggleLanguage()" id="langToggle">
+                        العربية
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- Hero Section -->
+          <section class="about-section text-white text-start" id="home">
+            <div class="container position-relative">
+            <div class="about-content">
+                <h2 class="mb-3 fw-bold" data-en="About Us" data-ar="من نحن">About Us</h2>
+                <p data-en="Examples of our experience in implementing specialized projects in the education, tourism, security, and infrastructure sectors." data-ar="أمثلة على خبرتنا في تنفيذ المشاريع المتخصصة في قطاعات التعليم والسياحة والأمن والبنية التحتية.">Examples of our experience in implementing specialized projects in the education, tourism, security, and infrastructure sectors.</p>
+                  <p class="fs-5 text-white-50 fst-italic" data-en="Our experience is based on the track record of the company's founder, Engineer Amr El-Baroudi, who has influenced and supervised projects exceeding $5 billion in several countries." data-ar="تستند خبرتنا إلى السجل الحافل لمؤسس الشركة، المهندس عمرو البارودي، الذي أثر وأشرف على مشاريع تتجاوز 5 مليارات دولار في عدة دول.">
+                    "Our experience is based on the track record of the company's founder, Engineer Amr El-Baroudi, who has influenced and supervised projects exceeding $5 billion in several countries."
+                  </p>
+                <button class="quote-btn mt-3" data-ar="اعرف المزيد" data-en="Know More">Know More</button>
+            </div>
+            </div>
+
+                <!-- Stats -->
+               <div class="stats-box d-flex justify-content-evenly align-items-center text-center">
+                    <div>
+                        <h3 data-ar="٢٥٠+" data-en="250+">250+</h3>
+                        <p data-ar="المشاريع" data-en="PROJECTS">PROJECTS</p>
+                    </div>
+                    <div>
+                        <h3 data-ar="٢٢٠+" data-en="220+">220+</h3>
+                        <p data-ar="العملاء" data-en="CLIENTS">CLIENTS</p>
+                    </div>
+                    <div>
+                        <h3 data-ar="٤٫٨+" data-en="4.8+">4.8+</h3>
+                        <p data-ar="التقييمات" data-en="RATINGS">RATINGS</p>
+                    </div>
+                </div>
+
+        </section>
+        <section id="home" class="hero-section padding-section">
+           
+                <div class="container">
+                    <div class="row align-items-center justify-content-center py-5">
+                        <div class="col-lg-6">
+                            <div class="img">
+                                <img src="images/about-us.webp" class="w-100" alt="about-us">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="title mb-4" data-en=" Who are we?" data-ar=" من نحن؟">
+                                 Who are we?
+                            </h2>
+                            <div class="hero-text">
+                                <p class="first-p" data-en="Bio Constructions Group Ltd is a UK-registered company operating across multiple sectors, including:" data-ar="شركة Bio Constructions Group Ltd هي شركة بريطانية مسجلة تعمل في عدة مجالات، من بينها:">
+                                    Bio Constructions Group Ltd is a UK-registered company operating across multiple sectors, including:
+                                </p>
+                                <ul class="list-unstyled d-flex flex-column justify-content-center gap-5">
+                                    <li class="d-flex align-items-center gap-2">
+                                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                                        <p data-en="Engineering, Structural and architectural consultancy" data-ar="الاستشارات الهندسية والمعمارية والتصميم المعمارى والانشائى واعداد المقايسات والعطاءات وادارة المشاريع واعداد التقارير الفنية والاشراف على التنفيذ واعداد الجداول الزمنية ومراقبة التكاليف">Engineering, Structural and architectural consultancy</p>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                        <p data-ar="خدمات التعليم الرقمي والتدريب الإلكتروني" data-en="Digital education and e-learning services ">Digital education and e-learning services </p>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                        <p data-ar="تطوير البرمجيات، مع تركيز خاص على تطبيقات الأعمال وإنترنت الأشياء والذكاء الاصطناعى ونظم المعلومات" data-en="Software development, with a focus on business and IoT applications ">Software development, with a focus on business and IoT applications </p>
+                                    </li>
+                                    <li class="d-flex align-items-center gap-2">
+                                        <div class="icon"><i class="fa-solid fa-check"></i></div>
+                                        <p data-ar="تجارة الجملة والتوزيع بعلامات تجارية خاصة للعطور ومستحضرات التجميل " data-en="Wholesale and private label distribution of perfumes and cosmetic products">Wholesale and private label distribution of perfumes and cosmetic products</p>
+                                    </li>
+                                </ul>
+                                <p class="second-p" data-en="We work closely with trusted partners in the UK, Egypt, and the Gulf region to provide high-quality, innovative, and reliable services to our clients." data-ar="نتعاون مع شركاء موثوقين في المملكة المتحدة ومصر ومنطقة الخليج لتقديم خدمات مبتكرة وموثوقة وعالية الجودة لعملائنا.">
+                                    We work closely with trusted partners in the UK, Egypt, and the Gulf region to provide high-quality, innovative, and reliable services to our clients.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+             <div class="container-fluid">
+                 <div class="row g-4 Specializations py-5">
+                    <h3 class="h4 mb-5 text-center text-white" data-en="Our Core Services" data-ar="خدماتنا الأساسية">Our Core Services</h3>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon"> <i class="fas fa-robot"></i></div>
+                                <h5 class="card-title" data-en="AI Integration" data-ar="دمج الذكاء الاصطناعي">AI Integration</h5>
+                                <p class="card-text" data-en="See how we integrate artificial intelligence into construction" data-ar="شاهد كيف ندمج الذكاء الاصطناعي في البناء">
+                                    See how we integrate artificial intelligence into construction
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon">
+                                    <i class="fas fa-diagram-project"></i>
+                                </div>
+                                <h5 class="card-title" data-en="Our Projects" data-ar="مشاريعنا">Our Projects</h5>
+                                <p class="card-text" data-en="Photos & Details of completed or important projects" data-ar="صور وتفاصيل المشاريع المكتملة أو المهمة">
+                                    Photos & Details of completed or important projects
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                               <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                                <h5 class="card-title" data-en="Exclusive Patents" data-ar="براءات الاختراع الحصرية">Exclusive Patents</h5>
+                                <p class="card-text" data-en="Trusted Links, Individual Foundations" data-ar="روابط موثوقة، أسس فردية">
+                                    Trusted Links, Individual Foundations
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon"><i class="fas fa-user-tie"></i></div>
+                                <h5 class="card-title" data-en="About Engineer" data-ar="عن المهندس">About Engineer</h5>
+                                <p class="card-text" data-en="National Biography of Engineer Amr Al-Baroudi and His Experience" data-ar="السيرة الوطنية للمهندس عمرو البارودي وخبرته">
+                                    National Biography of Engineer Amr Al-Baroudi and His Experience
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card d-flex flex-column justify-content-center align-items-center h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon"><i class="fas fa-drafting-compass"></i></div>
+                                <h5 class="card-title" data-en="Engineering Structural & Architectural Consultancy and Project's Management " data-ar="الاستشارات الهندسية المعمارية والانشائية وادارة المشاريع ومراقلة التكاليف">Engineering Structural & Architectural Consultancy and Project's Management </h5>
+                                <p class="card-text" data-en="We offer technical consultancy services related to structural design, project planning, and smart construction technologies." data-ar="نقدم خدمات استشارية فنية متعلقة بالتصميم الإنشائي، وتخطيط وادارة المشاريع، وتكنولوجيا البناء الذكي.">
+                                    We offer technical consultancy services related to structural design, project planning, and smart construction technologies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                                <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                                <h5 class="card-title" data-en="E-learning & Online Education " data-ar=" التعليم الإلكتروني والتدريب">E-learning & Online Education</h5>
+                                <p class="card-text" data-en="We provide online courses and training materials in various technical and business fields." data-ar="نوفر دورات تدريبية ومواد تعليمية عبر الإنترنت في مجالات تقنية وتجارية متنوعة.">
+                                    We provide online courses and training materials in various technical and business fields.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="icon"><i class="fas fa-code"></i></div>
+                                <h5 class="card-title" data-en="Software Development" data-ar=" تطوير البرمجيات"> Software Development</h5>
+                                <p class="card-text" data-en="We specialize in business applications, custom web systems, and IoT-based platforms." data-ar="نمتلك خبرة في تطوير تطبيقات الأعمال، والأنظمة الإلكترونية حسب الطلب، ومنصات إنترنت الأشياء (IoT) والذكاء الاصطناعى ونظم المعلومات .">
+                                   We specialize in business applications, custom web systems, and IoT-based platforms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                    <div class="icon"><i class="fas fa-spray-can-sparkles"></i></div>
+                                <h5 class="card-title" data-en="Cosmetics Wholesale & Private Label " data-ar=" تجارة مستحضرات التجميل والجملة والعلامات الخاصة">Cosmetics Wholesale & Private Label</h5>
+                                <p class="card-text" data-en="We distribute a variety of cosmetic products under our own brand, and we offer private label manufacturing solutions through certified partners." data-ar="نوزع مجموعة متنوعة من مستحضرات التجميل تحت علامتنا التجارية، كما نوفر حلول تصنيع للغير بالتعاون مع مصانع معتمدة بتكنولوجيا بريطانية .">
+                                    We distribute a variety of cosmetic products under our own brand, and we offer private label manufacturing solutions through certified partners.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+        </section>
+
+     
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5 projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="title mb-4" data-en=" Our Projects" data-ar="مشاريعنا">
+                            Our Projects
+                        </h2>
+                        <p class="" data-en="Bio Constructions, led by Eng. Amr Al-Baroudi, has 31+ years of experience and $5B+ in projects across key sectors." data-ar="تتمتع شركة بيو كونستركشنز، بقيادة المهندس عمرو البارودي، بخبرة تزيد عن ٣١ عامًا ومشاريع تتجاوز ٥ مليارات دولار في قطاعات رئيسية.">
+                           Bio Constructions, led by Eng. Amr Al-Baroudi, has 31+ years of experience and $5B+ in projects across key sectors.
+                        </p>
+                        <p class="text-muted" data-en="The following are photographic glimpses of various projects he has led or engineered:" data-ar="فيما يلي لمحات فوتوغرافية لمختلف المشاريع التي قادها أو هندسها:">
+                            The following are photographic glimpses of various projects he has led or engineered:
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                          <div class="custom-card shadow-lg h-100">
+        <img src="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image">
+        <div class="card-overlay">
+          <div class="project-title" data-en="Strategic Maritime Project - Coastal City (Saudi Arabia)" data-ar="مشروع بحري استراتيجي - مدينة ساحلية (السعودية)">Strategic Maritime Project - Coastal City (Saudi Arabia)</div>
+          <div class="project-description" data-en="Comprehensive engineering supervision of the implementation of construction facilities and infrastructure for a large port, as part of an integrated coastal development project across the country." data-ar="إشراف هندسي شامل على تنفيذ المرافق الإنشائية والبنية التحتية لميناء كبير، كجزء من مشروع تطوير ساحلي متكامل عبر البلاد.">
+            Comprehensive engineering supervision of the implementation of construction facilities and infrastructure for a large port, as part of an integrated coastal development project across the country.
+          </div>
+        </div>
+      </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="custom-card shadow-lg h-100">  
+                                <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top project-image" alt="Integrated University Complex">
+                            <div class="card-overlay">
+                                <div class="project-title" data-en="Integrated University Complex - Education City (Libya)" data-ar="مجمع جامعي متكامل - مدينة التعليم (ليبيا)">
+                                    Integrated University Complex - Education City (Libya)
+                                </div>
+                                <div class="project-description" data-en="Design and implementation management of a university campus containing several educational and service buildings, with complete infrastructure in a desert environment." data-ar="إدارة التصميم والتنفيذ لحرم جامعي يحتوي على عدة مباني تعليمية وخدمية، مع بنية تحتية كاملة في بيئة صحراوية.">
+                                    Design and implementation management of a university campus containing several educational and service buildings, with complete infrastructure in a desert environment.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="custom-card shadow-lg h-100">
+                       
+                                <img src="https://images.pexels.com/photos/2901209/pexels-photo-2901209.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top project-image" alt="Archaeological Area Development">
+                               
+                            <div class="card-overlay">
+                                <div class="project-title" data-en="Development of an Archaeological Area - Coastal Heritage City (Yemen)" data-ar="تطوير منطقة أثرية - مدينة تراثية ساحلية (اليمن)">
+                                    Development of an Archaeological Area - Coastal Heritage City (Yemen)
+                                </div>
+                                <div class="project-description" data-en="Restoration and development of facilities and amenities within an area with a historical character, while preserving the architectural integrity of the surrounding environment." data-ar="ترميم وتطوير المرافق والخدمات داخل منطقة ذات طابع تاريخي، مع الحفاظ على التكامل المعماري للبيئة المحيطة.">
+                                    Restoration and development of facilities and amenities within an area with a historical character, while preserving the architectural integrity of the surrounding environment.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="custom-card shadow-lg h-100">
+                           
+                                <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top project-image" alt="Luxury Hotel Project">
+                              
+                            <div class="card-overlay">
+                                <div class="project-title" data-en="Luxury Hotel Project - Marine Tourist Site" data-ar="مشروع فندق فاخر - موقع سياحي بحري">
+                                    Luxury Hotel Project - Marine Tourist Site
+                                </div>
+                                <div class="project-description" data-en="Construction of a five-star beachfront hotel with hospitality facilities, restaurants, and conference halls, under high-level engineering supervision." data-ar="بناء فندق خمس نجوم على الواجهة البحرية مع مرافق الضيافة والمطاعم وقاعات المؤتمرات، تحت إشراف هندسي عالي المستوى.">
+                                    Construction of a five-star beachfront hotel with hospitality facilities, restaurants, and conference halls, under high-level engineering supervision.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="swiper mySwiper py-5">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="images/img1.jpg" class="img-fluid rounded" alt="Slide 1">
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="images/img2.jpg" class="img-fluid rounded" alt="Slide 2">
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="images/img3.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img4.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img5.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img6.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img7.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img8.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img9.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img10.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img11.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img12.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img13.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img14.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img15.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img16.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img17.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+      <div class="swiper-slide">
+        <img src="images/img18.jpg" class="img-fluid rounded" alt="Slide 3">
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-next custom-swiper-btn">
+  <i class="fas fa-chevron-right"></i>
+</div>
+<div class="swiper-button-prev custom-swiper-btn">
+  <i class="fas fa-chevron-left"></i>
+</div>
+  </div>
+            </div>
+        </section>
+
+        <!-- Patents Section -->
+        <!-- <section id="patents" class="py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="display-5 mb-4" data-en="Our Patents & Innovations" data-ar="براءات الاختراع والابتكارات">Our Patents & Innovations</h2>
+                        <p class="lead" data-en="Pioneering the future of construction through innovative technologies and AI integration" data-ar="ريادة مستقبل البناء من خلال التقنيات المبتكرة ودمج الذكاء الاصطناعي">
+                            Pioneering the future of construction through innovative technologies and AI integration
+                        </p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-lightbulb display-4 text-warning mb-3"></i>
+                                <h5 class="card-title" data-en="Smart Construction Components" data-ar="مكونات البناء الذكية">Smart Construction Components</h5>
+                                <p class="card-text" data-en="Patented system integrating AI into construction materials" data-ar="نظام مسجل ببراءة اختراع يدمج الذكاء الاصطناعي في مواد البناء">
+                                    Patented system integrating AI into construction materials
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-gear display-4 text-success mb-3"></i>
+                                <h5 class="card-title" data-en="Adaptive Structures" data-ar="الهياكل التكيفية">Adaptive Structures</h5>
+                                <p class="card-text" data-en="Revolutionary building systems that adapt to environmental changes" data-ar="أنظمة بناء ثورية تتكيف مع التغيرات البيئية">
+                                    Revolutionary building systems that adapt to environmental changes
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="bi bi-shield-check display-4 text-info mb-3"></i>
+                                <h5 class="card-title" data-en="Future Technologies" data-ar="تقنيات المستقبل">Future Technologies</h5>
+                                <p class="card-text" data-en="Advanced construction methodologies for next-generation buildings" data-ar="منهجيات البناء المتقدمة لمباني الجيل القادم">
+                                    Advanced construction methodologies for next-generation buildings
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 contact text-white">
+            <div class="container">
+              <div class="row g-4">
+                <div class="col-12">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9150138202726!2d-0.12366119999999997!3d51.51477515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccac69823f%3A0x4eb63cbd6bcc52c7!2zU2hlbHRvbiBTdCwgTG9uZG9uIFdDMkggOUpR2Iwg2KfZhNmF2YXZhNmD2Kkg2KfZhNmF2KrYrdiv2Kk!5e0!3m2!1sar!2seg!4v1753395908823!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form p-3">
+                            <h2 class="my-3 text-center" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
+                        <form class="consultation-form" data-service="engineering">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                                    <input type="text" class="form-control mb-2" name="name" required data-en="Enter your full name" data-ar="أدخل اسمك الكامل" placeholder="Enter your full name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                                    <input type="email" class="form-control" name="email" required data-en="Enter your email" data-ar="أدخل بريدك الإلكتروني" placeholder="Enter your email">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" data-en="Project Details" data-ar="تفاصيل المشروع">Project Details</label>
+                                    <textarea class="form-control" name="message" rows="4" data-en="Describe your project requirements..." data-ar="اوصف متطلبات مشروعك..." placeholder="Describe your project requirements..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <button type="submit" class="btn btn-msg btn-lg">
+                                        <i class="fab fa-whatsapp me-2"></i>
+                                        <span data-en="Send to WhatsApp" data-ar="إرسال عبر واتساب">Send to WhatsApp</span>
+                                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+       
+ 
+    </main>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
