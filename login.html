@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCG - Bioconstruction Group LTD</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <section class="auth py-5">
+        <div class="container">
+            <div class="d-flex justify-content-end mb-3">
+                 <button class="btn btn-outline-light translate-btn btn-sm me-2"  id="langToggle">
+                        العربية
+                    </button>
+            </div>
+            <div class="row g-4 justify-content-center align-items-center">
+                <div class="col-lg-6">
+                    <div class="login-card shadow shadow-sm">
+                        <div class="tabs d-flex flex-wrap gap-4 justify-content-center mb-5">
+                            <div class="">
+                                <button id="loginTab" class="active" data-ar="تسجيل الدخول" data-en="Login">Login</button>
+                            </div>
+                            <div class="">
+                                <button id="registerTab" data-ar="انشاء حساب" data-en="Create Account">Create Account</button>
+                            </div>
+                        </div>
+                      
+                        <form action="" id="loginForm"  class="form active">
+                              <div class="heading text-center mb-4">
+                            <h2 class="" data-ar="صفحة تسجيل الدخول" data-en="Login Page">Login Page</h2>
+                            <p class="description" data-ar="الرجاء إدخال تفاصيل تسجيل الدخول الخاصة بك للوصول إلى حسابك." data-en="Please enter your login details to access your account.">Please enter your login details to access your account.</p>
+                        </div>
+                            <div class="row g-1">
+                                <div class="co-12">
+                                    <div class="">
+                                        <label for="userName" data-ar="اسم المستخدم" data-en="UserName">UserName</label>
+                                        <input class="w-100" type="text" id="loginUserName" name="userName"  placeholder="enter your username"
+                                          data-placeholder-en="enter your username"
+                                          data-placeholder-ar="ادخل اسم المستخدم"
+                                        >
+                                        <div>
+                                            <p class="error-msg p-2"></p>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                                <div class="co-12">
+                                    <div class="password-field position-relative">
+                                        <label for="password" data-ar="الرقم السري" data-en="Password">Password</label>
+                                        <input class="w-100" type="password" id="loginPassword" name="password" placeholder="enter your password" data-placeholder-en="enter your password"
+                                          data-placeholder-ar="ادخل الرقم السري">
+                                        <i class="fas fa-eye toggle-password" data-input="loginPassword"></i>
+                                        <div>
+                                        <p class="error-msg"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="button">
+                                        <button type="submit" class="btn btn-login w-100" data-ar="تسجيل الدخول" data-en="Login">Login</button>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between align-items-center mt-2 p-3">
+                                        <div>
+                                            <a class="create-account" href="signUp.html" data-ar="انشاء حساب" data-en="create Account">create Account</a>
+                                        </div>
+                                        <div>
+                                            <a class="forget-pass" data-ar="نسيت الرقم السري؟" data-en="forget password?"  href="#">forget password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                         <form action="" id="registerForm" class="form">
+                              <div class="heading text-center mb-4">
+                            <h2 class="" data-ar="صفحة إنشاء حساب" data-en="Create Account Page">Create Account Page</h2>
+                            <p class="description" data-ar="الرجاء إدخال تفاصيل التسجيل الخاصة بك لإنشاء حسابك" data-en="Please enter your register details to create your account">Please enter your register details to create your account.</p>
+                        </div>
+                        <div class="row g-1">
+
+                            <div class="co-12">
+                                <label for="userName" data-ar="الاسم" data-en="UserName">UserName</label>
+                                <input class="w-100" type="text" id="userName" name="userName" placeholder="Enter your name" data-placeholder-en="Enter your name"
+                                          data-placeholder-ar="ادخل اسم المستخدم">
+                                <p class="error-msg"></p>
+                            </div>
+                            <div class="co-12">
+                                <label for="mail" data-ar="البريد الالكتروني" data-en="E-mail">E-mail</label>
+                                <input class="w-100" type="email" id="mail" name="userName" placeholder="Enter your email" data-placeholder-en="Enter your email"
+                                          data-placeholder-ar="ادخل البريد الالكتروني">
+                                <p class="error-msg"></p>
+                            </div>
+
+                            <div class="co-12">
+                                <div class="password-field position-relative">
+                                    <label for="password" data-ar="الرقم السري" data-en="Password">Password</label>
+                                    <input class="w-100" type="password" id="password" name="password" data-placeholder-en="Enter your Password"
+                                          data-placeholder-ar="ادخل الرقم السري" placeholder="Enter your Password">
+                                    <i class="fas fa-eye toggle-password" data-input="password"></i>
+                                    <p class="error-msg position-static"></p>
+                                </div>
+                            </div>
+
+                            <div class="co-12">
+                                <div class="password-field position-relative">
+                                    <label for="confirmPassword" data-ar="تأكيد الرقم السري" data-en="Confirm your Password">Confirm your Password</label>
+                                    <input class="w-100" type="password" id="confirmPassword" name="confirm-Password" data-placeholder-en="Confirm your Password"
+                                          data-placeholder-ar="تأكيد الرقم السري"  placeholder="Confirm your Password">
+                                    <i class="fas fa-eye toggle-password" data-input="confirmPassword"></i>
+                                    <p class="error-msg position-static"></p>
+                                </div>
+                            </div>
+                            <div class="co-12">
+                                <div class="">
+                                    <label for="phone" data-ar="رقم التليفون" data-en="Your phone"> Your phone</label>
+                                    <input class="w-100 phone" type="tel" id="phone" name="phone" data-placeholder-en="Enter your phone"
+                                          data-placeholder-ar="ادخل رقم التليفون"  placeholder="Enter your phone">
+                                    <p class="error-msg position-static"></p>
+                                </div>
+                            </div>
+                            <div class="co-12">
+                                <div class="">
+                                    <label for="address" data-ar="العنوان" data-en="Your address"> Your address</label>
+                                    <textarea class="w-100" type="text" id="address" name="address" data-placeholder-en="Enter your Addrees"
+                                          data-placeholder-ar="ادخل العنوان"  placeholder="Enter your Addrees"></textarea>
+                                    <p class="error-msg position-static text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-login w-100" data-ar="انشئ حسابك" data-en="Create Account">
+                                     Create Account
+                                </button>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="d-flex justify-content-center align-items-center p-1">
+                                    <a class="create-account" href="login.html" data-ar="لدي حساب بالفعل؟" data-en="Already have account?">Already have account?</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+         <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

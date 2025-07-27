@@ -11,7 +11,7 @@
 <body>
      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
         <div class="container">
-            <a class="navbar-brand" href="#home">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="BioCG" class="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -23,13 +23,13 @@
                         <a class="nav-link" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#about" data-en="About Us" data-ar="من نحن">About Us</a>
+                        <a class="nav-link" href="index.html" data-en="About Us" data-ar="من نحن">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#services" data-en="Services" data-ar="خدماتنا">Services</a>
+                        <a class="nav-link" href="index.html" data-en="Services" data-ar="خدماتنا">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#projects" data-en="Projects" data-ar="مشاريعنا">Projects</a>
+                        <a class="nav-link" href="index.html" data-en="Projects" data-ar="مشاريعنا">Projects</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Pages" data-ar="الصفحات">
@@ -39,25 +39,27 @@
                             <li><a class="dropdown-item" href="#engineeringConsulting" data-en="Engineering Consulting" data-ar="الاستشارات الهندسيه">Engineering Consulting</a></li>
                             <li><a class="dropdown-item" href="courses.html" data-en="Training and courses" data-ar="التدريب والدورات">Training and courses</a></li>
                             <li><a class="dropdown-item" href="IT&AI.html" data-en="IT, artificial intelligence, and information systems" data-ar="تكنولوجيا المعلومات والذكاء الاصطناعي ونظم المعلومات">IT, artificial intelligence, and information systems</a></li>
-                            <li><a class="dropdown-item" href="#page4" data-en="E-store" data-ar="المتجر الإلكتروني">E-store</a></li>
                             <li><a class="dropdown-item last-child" href="cosmeticsmanufacturing.html" data-en="Cosmetics manufacturing and sales" data-ar="تصنيع وبيع مستحضرات التجميل">Cosmetics manufacturing and sales</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+                        <a class="nav-link" href="index.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
                     </li>
                 </ul>
                 <div class="navbar-nav mt-3 mt-lg-0">
-                    <button class="btn btn-outline-light translate-btn btn-sm me-2" onclick="toggleLanguage()" id="langToggle">
+                    <button class="btn btn-outline-light translate-btn btn-sm me-2" id="langToggle">
                         العربية
                     </button>
+                </div>
+                <div>
+                    <a href="login.html"  data-ar="تسجيل الدخول" data-en="Sign In" class="signin mt-3 mt-lg-0">Sign In</a>
                 </div>
             </div>
         </div>
     </nav>
     <header class="header text-center">
         <h2 data-ar="خدمات الاستشارات الهندسية" data-en="Engineering Consulting Services">Engineering Consulting Services</h2>
-        <p data-en="We offer expert engineering, architectural, and structural design consulting tailored to each project's needs." data-ar="نحن نقدم الاستشارات الهندسية والمعمارية والتصميم الهيكلي المتخصصة المصممة خصيصًا لتلبية احتياجات كل مشروع." class="design-description">
+        <p data-en="We offer expert engineering, architectural, and structural design consulting tailored to each project's needs." data-ar="نحن نقدم الاستشارات الهندسيه والتصميم المعماري والانشائي المتخصص والمصمم خصيصا لتلبية احتياجات كل مشروع "class="design-description">
              We offer expert engineering, architectural, and structural design consulting tailored to each project's needs.
         </p>
     </header>
@@ -68,12 +70,11 @@
                 <div class="row g-4">
                        <div class="col-md-6 col-lg-4 margin">
                             <div class="service-card text-center pt-5 h-100 shadow rounded-4 position-relative bg-white">
-                                <!-- Image -->
+                              
                                 <div class="icon-wrapper position-absolute top-0 start-50 translate-middle" >
-                                <img src="images/engineering-service1.avif" class="w-100 h-100 object-fit-cover" alt="Service Image">
+                                <img src="images/engineering-service1.avif" class="w-100 h-100" alt="Service Image">
                                 </div>
 
-                                <!-- Card Content -->
                                 <div class="mt-5 pt-4">
                                 <h3 class="service-title fw-bold fs-5 mb-2" data-en="Structural Design" data-ar="التصميم الإنشائي">Structural Design</h3>
                                 <p class="service-desc text-muted small mb-3" data-ar="حلول هندسية إنشائية متقدمة للمشاريع المعقدة" data-en="Advanced structural engineering solutions for complex projects">
@@ -84,14 +85,13 @@
                         </div>
                     <div class="col-md-6 col-lg-4 margin">
                          <div class="service-card text-center p-4 pt-5 h-100 shadow rounded-4 position-relative bg-white">
-                                <!-- Image -->
+                              
                                 <div class="icon-wrapper position-absolute top-0 start-50 translate-middle" >
-                                <img src="images/engineering-service2.jpg" class="w-100 h-100 object-fit-cover" alt="Service Image">
+                                <img src="images/engineering-service2.jpg" class="w-100 h-100" alt="Service Image">
                                 </div>
 
-                                <!-- Card Content -->
                                 <div class="mt-5 pt-4">
-                                <h3 class="service-title fw-bold fs-5 mb-2" data-ar="التخطيط المعماري" data-en="Architectural Planning">Architectural Planning</h3>
+                                <h3 class="service-title fw-bold fs-5 mb-2" data-ar="التصميم والتخطيط المعماري" data-en="Architectural Planning">Architectural Planning</h3>
                                 <p class="service-desc text-muted small mb-3" data-ar="خدمات التصميم والتخطيط المعماري الشامل" data-en="Comprehensive architectural design and planning services">
                                     Comprehensive architectural design and planning services
                                 </p>
@@ -100,12 +100,9 @@
                     </div>
                     <div class="col-md-6 col-lg-4 margin">
                         <div class="service-card text-center p-4 pt-5 h-100 shadow rounded-4 position-relative bg-white">
-                                <!-- Image -->
                                 <div class="icon-wrapper position-absolute top-0 start-50 translate-middle" >
-                                <img src="images/engineering-service3.jpg" class="w-100 h-100 object-fit-cover" alt="Service Image">
+                                <img src="images/engineering-service3.jpg" class="w-100 h-100" alt="Service Image">
                                 </div>
-
-                                <!-- Card Content -->
                                 <div class="mt-5 pt-4">
                                 <h3 class="service-title fw-bold fs-5 mb-2" data-ar="إدارة المشاريع" data-en="Project Management">Project Management</h3>
                                 <p class="service-desc text-muted small mb-3" data-ar="إدارة شاملة للمشاريع الإنشائية من البداية إلى النهاية" data-en="End-to-end project management for construction projects">
@@ -125,8 +122,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="form px-4 py-5">
-                            <h2 class="mb-5 text-center" data-en="Request Engineering Consultation" data-ar="طلب استشارة هندسية">Request Engineering Consultation</h2>
+                        <div class="contact-form  px-4 py-5">
+                            <h2 class="mb-5 text-center" data-en="Request Engineering Consultation or Design" data-ar="طلب استشارة هندسية أو تصميم">Request Engineering Consultation or Design</h2>
                         <form class="consultation-form" data-service="engineering">
                             <div class="row g-4">
                                 <div class="col-12">
@@ -168,8 +165,82 @@
             </div>
         </section>
     </main>
-    
+  <footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4 justify-content-center align-items-center">
+      <div class="col-lg-4">
+        <div class="">
+            <a class="logo d-flex justify-content-center align-items-center" href="index.html" aria-label="BIOCG logo">
+                <img src="images/logo.png" class="" alt="">
+            </a>
+        </div>
+      </div>
+  <div class="col-lg-8">
+ <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center gap-5 mt-4">
+  <li class="mb-3">
+    <a href="index.html" aria-label="home" class="text-decoration-none" data-en="Home" data-ar="الرئيسية">Home</a>
+  </li>
+  <li class="mb-3">
+    <a href="index.html" aria-label="about" class="text-decoration-none" data-en="About Us" data-ar="من نحن">About Us</a>
+  </li>
+  <li class="mb-3">
+    <a href="index.html" aria-label="services" class="text-decoration-none" data-en="Services" data-ar="خدماتنا">Services</a>
+  </li>
+  <li class="mb-3">
+    <a href="index.html" aria-label="projects" class="text-decoration-none" data-en="Projects" data-ar="مشروعاتنا">Projects</a>
+  </li>
+
+  <li class="dropdown mb-3">
+    <a class="dropdown-toggle text-decoration-none" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Pages" data-ar="الصفحات">
+      Pages
+    </a>
+    <ul class="dropdown-menu text-center text-lg-start" aria-labelledby="pagesDropdown">
+      <li>
+        <a class="dropdown-item" href="#engineeringConsulting" data-en="Engineering Consulting" data-ar="الاستشارات الهندسية">Engineering Consulting</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="courses.html" data-en="Training and courses" data-ar="التدريب والدورات">Training and courses</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="IT&AI.html" data-en="IT, artificial intelligence, and information systems" data-ar="تكنولوجيا المعلومات والذكاء الاصطناعي ونظم المعلومات">
+          IT, artificial intelligence, and information systems
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="cosmeticsmanufacturing.html" data-en="Cosmetics manufacturing and sales" data-ar="تصنيع وبيع مستحضرات التجميل">
+          Cosmetics manufacturing and sales
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="mb-3">
+    <a href="index.html" aria-label="contact" class="text-decoration-none" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+  </li>
+</ul>
+
+</div>
+    </div>
+    <hr class="my-4 border-light">
+    <div class="text-center small text-white" data-ar="  جميع الحقوق محفوظة © 2025 Bio constructions group ltd." data-en="All rights reserved © 2025 Bio constructions group ltd.">
+   All rights reserved © 2025 Bio constructions group ltd.
+    </div>
+    <div class="text-center small text-white mt-4">
+         <span data-ar="تم التصميم بواسطة" data-en="Designed by:">Designed by: </span> <a aria-label="gwt facebook" href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"  class="gwt">GWT</a>
+    </div>
+  </div>
+</footer>
+    <a href="fav.html" class="fixed-fav-btn btn btn-danger rounded-circle text-decoration-none" >
+  <i class="fas fa-heart"></i>
+  <span id="fav-count" class="cart-count">0</span>
+</a>
+
+<a href="cart.html"  class="fixed-cart-btn btn btn-success rounded-circle text-decoration-none">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count" class="cart-count">0</span>
+</a>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
   const form = document.querySelector(".consultation-form");
@@ -244,29 +315,24 @@
     return true;
   }
 
-  // Real-time validation
   inputs.forEach((input) => {
     input.addEventListener("input", () => validateInput(input));
   });
 
-  // Language toggle logic
   if (langBtn) {
     langBtn.addEventListener("click", () => {
       currentLang = currentLang === "en" ? "ar" : "en";
 
-      // Labels
       labels.forEach(label => {
         label.textContent = label.dataset[currentLang];
       });
 
-      // Placeholders
       placeholders.forEach(input => {
         if (input.dataset[currentLang]) {
           input.placeholder = input.dataset[currentLang];
         }
       });
 
-      // Select options
       const options = form.querySelectorAll("select option");
       options.forEach(opt => {
         if (opt.dataset[currentLang]) {
@@ -274,13 +340,11 @@
         }
       });
 
-      // Button text
       const btnSpan = submitBtn.querySelector("span");
       if (btnSpan && btnSpan.dataset[currentLang]) {
         btnSpan.textContent = btnSpan.dataset[currentLang];
       }
 
-      // Rerun validation to show errors in new language
       inputs.forEach((input) => {
         if (input.classList.contains("is-invalid")) {
           validateInput(input);
@@ -289,7 +353,6 @@
     });
   }
 
-  // Submit → WhatsApp
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 

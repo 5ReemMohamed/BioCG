@@ -7,28 +7,15 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-     <div id="welcomeScreen" class="welcome-screen">
-        <div class="welcome-content">
-            <div class="logo-container">
-                <img src="images/logo.jpg" alt="BioCG Logo" class="company-logo">
-            </div>
-            <h1 class="company-name" data-en="Bioconstruction Group LTD" data-ar="مجموعة البناء الحيوي المحدودة">
-                Bioconstruction Group LTD
-            </h1>
-            <p class="company-tagline" data-en="Smart Infrastructure. A Human-Centered Vision." data-ar="البنية التحتية الذكية. رؤية محورها الإنسان.">
-                Smart Infrastructure. A Human-Centered Vision.
-            </p>
-        </div>
-    </div>
+    
       
-       <main id="mainContent" style="display: none;">
+       <main id="mainContent">
           <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
         <div class="container">
-            <a class="navbar-brand" href="#home">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="BioCG" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -56,7 +43,6 @@
                             <li><a class="dropdown-item" href="engineeringConsulting.html" data-en="Engineering Consulting" data-ar="الاستشارات الهندسيه">Engineering Consulting</a></li>
                             <li><a class="dropdown-item" href="courses.html" data-en="Training and courses" data-ar="التدريب والدورات">Training and courses</a></li>
                             <li><a class="dropdown-item" href="IT&AI.html" data-en="IT, artificial intelligence, and information systems" data-ar="تكنولوجيا المعلومات والذكاء الاصطناعي ونظم المعلومات">IT, artificial intelligence, and information systems</a></li>
-                            <li><a class="dropdown-item" href="#page4" data-en="E-store" data-ar="المتجر الإلكتروني">E-store</a></li>
                             <li><a class="dropdown-item last-child" href="cosmeticsmanufacturing.html" data-en="Cosmetics manufacturing and sales" data-ar="تصنيع وبيع مستحضرات التجميل">Cosmetics manufacturing and sales</a></li>
                         </ul>
                     </li>
@@ -65,14 +51,19 @@
                     </li>
                 </ul>
                 <div class="navbar-nav mt-3 mt-lg-0">
-                    <button class="btn btn-outline-light translate-btn btn-sm me-2" onclick="toggleLanguage()" id="langToggle">
+                    <button class="btn btn-outline-light translate-btn btn-sm me-2" id="langToggle">
                         العربية
                     </button>
+                </div>
+                <div class="profile d-flex justify-content-center mt-3 mt-lg-0">
+                  <a href="profile.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div>
+                    <a href="login.html"  data-ar="تسجيل الدخول" data-en="Sign In" class="signin mt-3 mt-lg-0">Sign In</a>
                 </div>
             </div>
         </div>
     </nav>
-        <!-- Hero Section -->
           <section class="about-section text-white text-start" id="home">
             <div class="container position-relative">
             <div class="about-content">
@@ -81,11 +72,9 @@
                   <p class="fs-5 text-white-50 fst-italic" data-en="Our experience is based on the track record of the company's founder, Engineer Amr El-Baroudi, who has influenced and supervised projects exceeding $5 billion in several countries." data-ar="تستند خبرتنا إلى السجل الحافل لمؤسس الشركة، المهندس عمرو البارودي، الذي أثر وأشرف على مشاريع تتجاوز 5 مليارات دولار في عدة دول.">
                     "Our experience is based on the track record of the company's founder, Engineer Amr El-Baroudi, who has influenced and supervised projects exceeding $5 billion in several countries."
                   </p>
-                <button class="quote-btn mt-3" data-ar="اعرف المزيد" data-en="Know More">Know More</button>
+                <a href="#about" class="quote-btn mt-3 d-inline-block text-decoration-none" data-ar="اعرف المزيد" data-en="Know More">Know More</a>
             </div>
             </div>
-
-                <!-- Stats -->
                <div class="stats-box d-flex justify-content-evenly align-items-center text-center">
                     <div>
                         <h3 data-ar="٢٥٠+" data-en="250+">250+</h3>
@@ -102,7 +91,7 @@
                 </div>
 
         </section>
-        <section id="home" class="hero-section padding-section">
+        <section id="about" class="hero-section padding-section">
            
                 <div class="container">
                     <div class="row align-items-center justify-content-center py-5">
@@ -149,8 +138,8 @@
                     </div>
               
                 </div>
-             <div class="container-fluid">
-                 <div class="row g-4 Specializations py-5">
+             <div class="container-fluid" id="services">
+                 <div class="row g-4 Specializations p-5">
                     <h3 class="h4 mb-5 text-center text-white" data-en="Our Core Services" data-ar="خدماتنا الأساسية">Our Core Services</h3>
                     <div class="col-md-6 col-lg-3">
                         <div class="card h-100 text-center border-0 shadow-sm">
@@ -245,10 +234,6 @@
                 </div>
                </div>
         </section>
-
-     
-
-        <!-- Projects Section -->
         <section id="projects" class="py-5 projects">
             <div class="container">
                 <div class="row">
@@ -320,138 +305,331 @@
                         </div>
                     </div>
                 </div>
-                  <div class="swiper mySwiper py-5">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="images/img1.jpg" class="img-fluid rounded" alt="Slide 1">
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="images/img2.jpg" class="img-fluid rounded" alt="Slide 2">
-      </div>
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img src="images/img3.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img4.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img5.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img6.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img7.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img8.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img9.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img10.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img11.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img12.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img13.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img14.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img15.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img16.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img17.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-      <div class="swiper-slide">
-        <img src="images/img18.jpg" class="img-fluid rounded" alt="Slide 3">
-      </div>
-    </div>
+                <div class="swiper mySwiper py-5">
+                        <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <img src="images/img1.jpg" class="img-fluid rounded" alt="Slide 1">
+                        </div>
+                       
+                        <div class="swiper-slide">
+                            <img src="images/img2.jpg" class="img-fluid rounded" alt="Slide 2">
+                        </div>
+                       
+                        <div class="swiper-slide">
+                            <img src="images/img3.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img4.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img5.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img6.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img7.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img8.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img9.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img10.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img11.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img12.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img13.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img14.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img15.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img16.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img17.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img18.jpg" class="img-fluid rounded" alt="Slide 3">
+                        </div>
+                        </div>
 
-    <!-- Navigation -->
-    <div class="swiper-button-next custom-swiper-btn">
-  <i class="fas fa-chevron-right"></i>
-</div>
-<div class="swiper-button-prev custom-swiper-btn">
-  <i class="fas fa-chevron-left"></i>
-</div>
-  </div>
+                      
+                        <div class="swiper-button-next custom-swiper-btn">
+                    <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev custom-swiper-btn">
+                    <i class="fas fa-chevron-left"></i>
+                    </div>
+                </div>
             </div>
         </section>
+    <section class="shop-section py-5">
+       <div class="store-animated-bar bg-primary mb-5 py-2 overflow-hidden position-relative">
+            <div class="scrolling-track">
+                <span class="scrolling-text" data-ar="🎉 تخفيضات كبيرة اليوم! خصم يصل إلى ٥٠٪ على جميع المنتجات! 🛍️ سارعوا قبل انتهاء العرض! 🎉" data-en="🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉">
+                🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉
+                </span>
+                 <span class="scrolling-text" data-ar="🎉 تخفيضات كبيرة اليوم! خصم يصل إلى ٥٠٪ على جميع المنتجات! 🛍️ سارعوا قبل انتهاء العرض! 🎉" data-en="🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉">
+                🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉
+                </span>
+                 <span class="scrolling-text" data-ar="🎉 تخفيضات كبيرة اليوم! خصم يصل إلى ٥٠٪ على جميع المنتجات! 🛍️ سارعوا قبل انتهاء العرض! 🎉" data-en="🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉">
+                🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉
+                </span>
+                 <span class="scrolling-text" data-ar="🎉 تخفيضات كبيرة اليوم! خصم يصل إلى ٥٠٪ على جميع المنتجات! 🛍️ سارعوا قبل انتهاء العرض! 🎉" data-en="🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉">
+                🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉
+                </span>
+                 <span class="scrolling-text" data-ar="🎉 تخفيضات كبيرة اليوم! خصم يصل إلى ٥٠٪ على جميع المنتجات! 🛍️ سارعوا قبل انتهاء العرض! 🎉" data-en="🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉">
+                🎉 Big Sale Today! Up to 50% Off on All Items! 🛍️ Hurry up before it ends! 🎉
+                </span>
+            </div>
+        </div>
 
-        <!-- Patents Section -->
-        <!-- <section id="patents" class="py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center mb-5">
-                        <h2 class="display-5 mb-4" data-en="Our Patents & Innovations" data-ar="براءات الاختراع والابتكارات">Our Patents & Innovations</h2>
-                        <p class="lead" data-en="Pioneering the future of construction through innovative technologies and AI integration" data-ar="ريادة مستقبل البناء من خلال التقنيات المبتكرة ودمج الذكاء الاصطناعي">
-                            Pioneering the future of construction through innovative technologies and AI integration
-                        </p>
-                    </div>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="bi bi-lightbulb display-4 text-warning mb-3"></i>
-                                <h5 class="card-title" data-en="Smart Construction Components" data-ar="مكونات البناء الذكية">Smart Construction Components</h5>
-                                <p class="card-text" data-en="Patented system integrating AI into construction materials" data-ar="نظام مسجل ببراءة اختراع يدمج الذكاء الاصطناعي في مواد البناء">
-                                    Patented system integrating AI into construction materials
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="bi bi-gear display-4 text-success mb-3"></i>
-                                <h5 class="card-title" data-en="Adaptive Structures" data-ar="الهياكل التكيفية">Adaptive Structures</h5>
-                                <p class="card-text" data-en="Revolutionary building systems that adapt to environmental changes" data-ar="أنظمة بناء ثورية تتكيف مع التغيرات البيئية">
-                                    Revolutionary building systems that adapt to environmental changes
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="bi bi-shield-check display-4 text-info mb-3"></i>
-                                <h5 class="card-title" data-en="Future Technologies" data-ar="تقنيات المستقبل">Future Technologies</h5>
-                                <p class="card-text" data-en="Advanced construction methodologies for next-generation buildings" data-ar="منهجيات البناء المتقدمة لمباني الجيل القادم">
-                                    Advanced construction methodologies for next-generation buildings
-                                </p>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3 class="h5 mb-3 mb-md-0 fw-bold text-primary" data-ar="تصفية المنتجات" data-en="Filter Products">Filter Products</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select" id="filter-select">
+                                    <option value="all" data-ar="كل المنتجات" data-en="All Products">All Products</option>
+                                    <option value="best-seller" data-ar="الأكثر مبيعًا" data-en="Best Sellers">Best Sellers</option>
+                                    <option value="highest-rated" data-ar="الأعلى تقييمًا" data-en="Highest Rated">Highest Rated</option>
+                                    <option value="highest-price" data-ar="الأعلى سعرًا" data-en="Highest Price">Highest Price</option>
+                                    <option value="lowest-price" data-ar="الأقل سعرًا" data-en="Lowest Price">Lowest Price</option>
+                                    <option value="suggestions" data-ar="ترشيحاتنا" data-en="Our Suggestions">Our Suggestions</option>
+                                    <option value="offers" data-ar="العروض" data-en="Offers">Offers</option>
+                                    </select>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
-
-        <!-- Contact Section -->
+            <div class="row justify-content-center" id="products-container">
+                       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h5 class="product-title" data-ar="المنتج الاول" data-en="Lorem, ipsum dolor.">Lorem, ipsum dolor.</h5>
+                                    <p class="product-description" data-ar="وصف المنتج" data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!</p>
+                                    
+                                    <div class="rating">
+                                        <div class="stars">4 <i class="fas fa-star"></i></div>
+                                        <span class="rating-text" data-ar="200 مراجعه" data-en="200 reviews">200 reviews</span>
+                                    </div>
+                                    
+                                    <div class="price-section">
+                                        <div class="price-container">
+                                            <span class="current-price">79.99</span>
+                                        <span class="old-price">99.99</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-actions">
+                                        <button class="btn-action btn-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span data-ar="اضف الي السلة" data-en=" Add to Cart">Add to Cart</span>
+                                        </button>
+                                        <button class="btn-action btn-favorite">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h5 class="product-title" data-ar="المنتج الاول" data-en="Lorem, ipsum dolor.">Lorem, ipsum dolor.</h5>
+                                    <p class="product-description" data-ar="وصف المنتج" data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!</p>
+                                    
+                                    <div class="rating">
+                                        <div class="stars">4 <i class="fas fa-star"></i></div>
+                                        <span class="rating-text" data-ar="200 مراجعه" data-en="200 reviews">200 reviews</span>
+                                    </div>
+                                    
+                                    <div class="price-section">
+                                        <div class="price-container">
+                                            <span class="current-price">79.99</span>
+                                        <span class="old-price">99.99</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-actions">
+                                        <button class="btn-action btn-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span data-ar="اضف الي السلة" data-en=" Add to Cart">Add to Cart</span>
+                                        </button>
+                                        <button class="btn-action btn-favorite">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h5 class="product-title" data-ar="المنتج الاول" data-en="Lorem, ipsum dolor.">Lorem, ipsum dolor.</h5>
+                                    <p class="product-description" data-ar="وصف المنتج" data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!</p>
+                                    
+                                    <div class="rating">
+                                        <div class="stars">4 <i class="fas fa-star"></i></div>
+                                        <span class="rating-text" data-ar="200 مراجعه" data-en="200 reviews">200 reviews</span>
+                                    </div>
+                                    
+                                    <div class="price-section">
+                                        <div class="price-container">
+                                            <span class="current-price">79.99</span>
+                                        <span class="old-price">99.99</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-actions">
+                                         <button class="btn-action btn-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span data-ar="اضف الي السلة" data-en=" Add to Cart">Add to Cart</span>
+                                        </button>
+                                        <button class="btn-action btn-favorite">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h5 class="product-title" data-ar="المنتج الاول" data-en="Lorem, ipsum dolor.">Lorem, ipsum dolor.</h5>
+                                    <p class="product-description" data-ar="وصف المنتج" data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!</p>
+                                    
+                                    <div class="rating">
+                                        <div class="stars">4 <i class="fas fa-star"></i></div>
+                                        <span class="rating-text" data-ar="200 مراجعه" data-en="200 reviews">200 reviews</span>
+                                    </div>
+                                    
+                                    <div class="price-section">
+                                        <div class="price-container">
+                                            <span class="current-price">79.99</span>
+                                        <span class="old-price">99.99</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-actions">
+                                         <button class="btn-action btn-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span data-ar="اضف الي السلة" data-en=" Add to Cart">Add to Cart</span>
+                                        </button>
+                                        <button class="btn-action btn-favorite">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h5 class="product-title" data-ar="المنتج الاول" data-en="Lorem, ipsum dolor.">Lorem, ipsum dolor.</h5>
+                                    <p class="product-description" data-ar="وصف المنتج" data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!</p>
+                                    
+                                    <div class="rating">
+                                        <div class="stars">4 <i class="fas fa-star"></i></div>
+                                        <span class="rating-text" data-ar="200 مراجعه" data-en="200 reviews">200 reviews</span>
+                                    </div>
+                                    
+                                    <div class="price-section">
+                                        <div class="price-container">
+                                            <span class="current-price">79.99</span>
+                                        <span class="old-price">99.99</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-actions">
+                                        <button class="btn-action btn-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span data-ar="اضف الي السلة" data-en=" Add to Cart">Add to Cart</span>
+                                        </button>
+                                        <button class="btn-action btn-favorite">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                            <div class="product-card">
+                                <div class="product-content">
+                                    <h5 class="product-title" data-ar="المنتج الاول" data-en="Lorem, ipsum dolor.">Lorem, ipsum dolor.</h5>
+                                    <p class="product-description" data-ar="وصف المنتج" data-en="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore nam culpa quas tempora ipsa quos adipisci accusamus ex in!</p>
+                                    
+                                    <div class="rating">
+                                        <div class="stars">4 <i class="fas fa-star"></i></div>
+                                        <span class="rating-text" data-ar="200 مراجعه" data-en="200 reviews">200 reviews</span>
+                                    </div>
+                                    
+                                    <div class="price-section">
+                                        <div class="price-container">
+                                            <span class="current-price">79.99</span>
+                                        <span class="old-price">99.99</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-actions">
+                                        <button class="btn-action btn-cart">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span data-ar="اضف الي السلة" data-en=" Add to Cart">Add to Cart</span>
+                                        </button>
+                                        <button class="btn-action btn-favorite">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                     
+                       <div class="col-md-6 col-lg-4">
+                        <div class="d-flex justify-content-center align-items-center mt-3">
+                        <button class="btn-action btn-cart" data-ar="اعرض المزيد" data-en="Show More">
+                                            Show More
+                        </button>
+                       </div>
+                       </div>
+            </div>
+        </div>
+    </section>
         <section id="contact" class="py-5 contact text-white">
             <div class="container">
-              <div class="row g-4">
+              <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-12">
+                    <div class="text-center mb-3">
+                      <h2 class="title text-center" data-ar="تواصل معنا" data-en="Contact Us">Contact Us</h2>
+                    </div>
+                </div>
                 <div class="col-12">
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9150138202726!2d-0.12366119999999997!3d51.51477515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ccac69823f%3A0x4eb63cbd6bcc52c7!2zU2hlbHRvbiBTdCwgTG9uZG9uIFdDMkggOUpR2Iwg2KfZhNmF2YXZhNmD2Kkg2KfZhNmF2KrYrdiv2Kk!5e0!3m2!1sar!2seg!4v1753395908823!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="form p-3">
+                <div class="col-lg-8">
+                    <div class="contact-form p-3">
                             <h2 class="my-3 text-center" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h2>
                         <form class="consultation-form" data-service="engineering">
                             <div class="row g-3">
@@ -479,6 +657,13 @@
                         </form>
                         </div>
                 </div>
+                <div class="col-lg-4">
+                    <div class="card address-card p-4">
+                        <p data-ar="الشركة مسجلة في شركات البيت، على موقع الحكومة البريطانية، تحت اسم: Bio Constructions Group Ltd." data-en="The company is registered in House companies , the UK government website, under the name: Bio constructions group ltd ">The company is registered in House companies , the UK government website, under the name: Bio constructions group ltd </p>
+                        <p data-ar="تحت رقم: 16588054" data-en="trhough number: 16588054">trhough number: 16588054</p>
+                        <p data-ar="عنوان الشركة: 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ, UNITED KINGDOM" data-en="company's address: 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ, UNITED KINGDOM">company's address: 71-75, Shelton Street, Covent Garden, London, WC2H 9JQ, UNITED KINGDOM</p>
+                    </div>
+                </div>
               </div>
             </div>
         </section>
@@ -486,11 +671,83 @@
        
  
     </main>
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4 justify-content-center align-items-center">
+      <div class="col-lg-4">
+        <div class="">
+            <a class="logo d-flex justify-content-center align-items-center" href="index.html" aria-label="BIOCG logo">
+                <img src="images/logo.png" class="" alt="">
+            </a>
+        </div>
+      </div>
+  <div class="col-lg-8">
+ <ul class="list-unstyled d-flex flex-wrap justify-content-center align-items-center gap-5 mt-4">
+  <li class="mb-3">
+    <a href="#home" aria-label="home" class="text-decoration-none" data-en="Home" data-ar="الرئيسية">Home</a>
+  </li>
+  <li class="mb-3">
+    <a href="#about" aria-label="about" class="text-decoration-none" data-en="About Us" data-ar="من نحن">About Us</a>
+  </li>
+  <li class="mb-3">
+    <a href="#services" aria-label="services" class="text-decoration-none" data-en="Services" data-ar="خدماتنا">Services</a>
+  </li>
+  <li class="mb-3">
+    <a href="#projects" aria-label="projects" class="text-decoration-none" data-en="Projects" data-ar="مشروعاتنا">Projects</a>
+  </li>
 
+  <li class="dropdown mb-3">
+    <a class="dropdown-toggle text-decoration-none" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-en="Pages" data-ar="الصفحات">
+      Pages
+    </a>
+    <ul class="dropdown-menu text-center text-lg-start" aria-labelledby="pagesDropdown">
+      <li>
+        <a class="dropdown-item" href="engineeringConsulting.html" data-en="Engineering Consulting" data-ar="الاستشارات الهندسية">Engineering Consulting</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="courses.html" data-en="Training and courses" data-ar="التدريب والدورات">Training and courses</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="IT&AI.html" data-en="IT, artificial intelligence, and information systems" data-ar="تكنولوجيا المعلومات والذكاء الاصطناعي ونظم المعلومات">
+          IT, artificial intelligence, and information systems
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="cosmeticsmanufacturing.html" data-en="Cosmetics manufacturing and sales" data-ar="تصنيع وبيع مستحضرات التجميل">
+          Cosmetics manufacturing and sales
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="mb-3">
+    <a href="#contact" aria-label="contact" class="text-decoration-none" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+  </li>
+</ul>
+
+</div>
+    </div>
+    <hr class="my-4 border-light">
+    <div class="text-center small text-white" data-ar="  جميع الحقوق محفوظة © 2025 Bio constructions group ltd." data-en="All rights reserved © 2025 Bio constructions group ltd.">
+   All rights reserved © 2025 Bio constructions group ltd.
+    </div>
+    <div class="text-center small text-white mt-4">
+         <span data-ar="تم التصميم بواسطة" data-en="Designed by:">Designed by: </span> <a aria-label="gwt facebook" href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"  class="gwt">GWT</a>
+    </div>
+  </div>
+</footer>
+<a href="fav.html" class="fixed-fav-btn btn btn-danger rounded-circle text-decoration-none" >
+  <i class="fas fa-heart"></i>
+  <span id="fav-count" class="cart-count">0</span>
+</a>
+
+<a href="cart.html"  class="fixed-cart-btn btn btn-success rounded-circle text-decoration-none">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count" class="cart-count">0</span>
+</a>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script src="js/main.js"></script>
 </body>
 </html>
