@@ -51,7 +51,10 @@
                         العربية
                     </button>
                 </div>
-                <div>
+                <div class="profile d-flex justify-content-center mt-3 mt-lg-0">
+                  <a href="profile.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="text-center">
                     <a href="login.html"  data-ar="تسجيل الدخول" data-en="Sign In" class="signin mt-3 mt-lg-0">Sign In</a>
                 </div>
             </div>
@@ -121,8 +124,8 @@
   <div class="container">
     <div class="row g-4 justify-content-center align-items-center">
       <div class="col-lg-4">
-        <div class="">
-            <a class="logo d-flex justify-content-center align-items-center" href="index.html" aria-label="BIOCG logo">
+        <div class="d-flex justify-content-center justify-content-lg-start">
+            <a class="logo d-flex justify-content-center justify-content-lg-start align-items-center" href="index.html" aria-label="BIOCG logo">
                 <img src="images/logo.png" class="" alt="">
             </a>
         </div>
@@ -195,137 +198,148 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-          const form = document.querySelector(".consultation-form");
-  const inputs = form.querySelectorAll("input, select, textarea");
-  const labels = form.querySelectorAll("label");
-  const placeholders = form.querySelectorAll("input, textarea");
-  const submitBtn = form.querySelector("button[type='submit']");
-  const langBtn = document.getElementById("langToggle");
+         const form = document.querySelector(".consultation-form");
+const inputs = form.querySelectorAll("input, select, textarea");
+const labels = form.querySelectorAll("label");
+const placeholders = form.querySelectorAll("input, textarea");
+const submitBtn = form.querySelector("button[type='submit']");
+const langBtn = document.getElementById("langToggle");
 
-  let currentLang = "en";
+let currentLang = "en";
 
-  const messages = {
-    en: {
-      required: "This field cannot be empty",
-      name: "Please enter a valid name (letters only)",
-      email: "Please enter a valid email address",
-      request: "Please select a training type",
-    },
-    ar: {
-      required: "لا يمكن ترك هذا الحقل فارغًا",
-      name: "يرجى إدخال اسم صالح (أحرف فقط)",
-      email: "يرجى إدخال بريد إلكتروني صالح",
-      request: "يرجى اختيار نوع التدريب",
-    }
-  };
+const messages = {
+  en: {
+    required: "This field cannot be empty",
+    name: "Please enter a valid name (letters only)",
+    email: "Please enter a valid email address",
+    request: "Please select a training type",
+  },
+  ar: {
+    required: "لا يمكن ترك هذا الحقل فارغًا",
+    name: "يرجى إدخال اسم صالح (أحرف فقط)",
+    email: "يرجى إدخال بريد إلكتروني صالح",
+    request: "يرجى اختيار نوع التدريب",
+  }
+};
 
-  const patterns = {
-    name: /^[A-Za-z\u0600-\u06FF ]{2,}$/,
-    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  };
+const patterns = {
+  name: /^[A-Za-z\u0600-\u06FF ]{2,}$/,
+  email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+};
 
-  function showError(input, message) {
-    removeError(input);
-    const error = document.createElement("div");
-    error.className = "text-danger mt-1 small error-message";
-    error.textContent = message;
-    input.classList.add("is-invalid");
-    input.parentElement.appendChild(error);
+function showError(input, message) {
+  removeError(input);
+  const error = document.createElement("div");
+  error.className = "text-danger mt-1 small error-message";
+  error.textContent = message;
+  input.classList.add("is-invalid");
+  input.parentElement.appendChild(error);
+}
+
+function removeError(input) {
+  input.classList.remove("is-invalid");
+  const existing = input.parentElement.querySelector(".error-message");
+  if (existing) existing.remove();
+}
+
+function validateInput(input) {
+  const name = input.name;
+  const value = input.value.trim();
+
+  if (value === "") {
+    showError(input, messages[currentLang].required);
+    return false;
   }
 
-  function removeError(input) {
-    input.classList.remove("is-invalid");
-    const existing = input.parentElement.querySelector(".error-message");
-    if (existing) existing.remove();
+  if (name === "name" && !patterns.name.test(value)) {
+    showError(input, messages[currentLang].name);
+    return false;
   }
 
-  function validateInput(input) {
-    const name = input.name;
-    const value = input.value.trim();
-
-    if (value === "") {
-      showError(input, messages[currentLang].required);
-      return false;
-    }
-
-    if (name === "name" && !patterns.name.test(value)) {
-      showError(input, messages[currentLang].name);
-      return false;
-    }
-
-    if (name === "email" && !patterns.email.test(value)) {
-      showError(input, messages[currentLang].email);
-      return false;
-    }
-
-    if (name === "request" && input.value === "") {
-      showError(input, messages[currentLang].request);
-      return false;
-    }
-
-    removeError(input);
-    return true;
+  if (name === "email" && !patterns.email.test(value)) {
+    showError(input, messages[currentLang].email);
+    return false;
   }
 
-  inputs.forEach((input) => {
-    input.addEventListener("input", () => validateInput(input));
-  });
+  if (name === "request" && input.value === "") {
+    showError(input, messages[currentLang].request);
+    return false;
+  }
 
-  langBtn.addEventListener("click", () => {
-    currentLang = currentLang === "en" ? "ar" : "en";
+  removeError(input);
+  return true;
+}
 
-    labels.forEach(label => {
+
+inputs.forEach((input) => {
+  input.addEventListener("input", () => validateInput(input));
+});
+
+langBtn.addEventListener("click", () => {
+  currentLang = currentLang === "en" ? "ar" : "en";
+
+ 
+  labels.forEach(label => {
+    if (label.dataset[currentLang]) {
       label.textContent = label.dataset[currentLang];
-    });
+    }
+  });
 
-    placeholders.forEach(input => {
-      if (input.dataset[currentLang]) {
-        input.placeholder = input.dataset[currentLang];
-      }
-    });
+ 
+  placeholders.forEach(input => {
+    if (input.dataset[currentLang]) {
+      input.placeholder = input.dataset[currentLang];
+    }
+  });
 
-    const options = form.querySelectorAll("select option");
-    options.forEach(opt => {
-      if (opt.dataset[currentLang]) {
-        opt.textContent = opt.dataset[currentLang];
-      }
-    });
+  
+  const options = form.querySelectorAll("select option");
+  options.forEach(opt => {
+    if (opt.dataset[currentLang]) {
+      opt.textContent = opt.dataset[currentLang];
+    }
+  });
 
-    const btnSpan = submitBtn.querySelector("span");
+  const btnSpan = submitBtn.querySelector("span");
+  if (btnSpan && btnSpan.dataset[currentLang]) {
     btnSpan.textContent = btnSpan.dataset[currentLang];
+  }
 
-    inputs.forEach((input) => {
-      if (input.classList.contains("is-invalid")) {
-        validateInput(input);
-      }
-    });
+ 
+  inputs.forEach((input) => {
+    if (input.classList.contains("is-invalid")) {
+      validateInput(input);
+    }
+  });
+});
+
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let isValid = true;
+  inputs.forEach((input) => {
+    if (!validateInput(input)) isValid = false;
   });
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  if (!isValid) return;
 
-    let isValid = true;
-    inputs.forEach((input) => {
-      if (!validateInput(input)) isValid = false;
-    });
+  const name = form.querySelector('[name="name"]').value.trim();
+  const email = form.querySelector('[name="email"]').value.trim();
+  const requestSelect = form.querySelector('[name="request"]');
+  const selectedOption = requestSelect.options[requestSelect.selectedIndex];
+  const requestText = selectedOption.dataset[currentLang] || selectedOption.textContent;
+  const message = form.querySelector('[name="message"]').value.trim();
 
-    if (!isValid) return;
+  const text = currentLang === "en"
+    ? `New Training Request:\nName: ${name}\nEmail: ${email}\nTraining Type: ${requestText}\nRequirements: ${message}`
+    : `طلب تدريب جديد:\nالاسم: ${name}\nالبريد الإلكتروني: ${email}\nنوع التدريب: ${requestText}\nالمتطلبات: ${message}`;
 
-    const name = form.querySelector('[name="name"]').value.trim();
-    const email = form.querySelector('[name="email"]').value.trim();
-    const request = form.querySelector('[name="request"]').value.trim();
-    const message = form.querySelector('[name="message"]').value.trim();
+  const phone = "966535061603";
+  const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  window.open(whatsappURL, "_blank");
+});
 
-    const text =
-      (currentLang === "en"
-        ? `New Training Request:\nName: ${name}\nEmail: ${email}\nTraining Type: ${request}\nRequirements: ${message}`
-        : `طلب تدريب جديد:\nالاسم: ${name}\nالبريد الإلكتروني: ${email}\nنوع التدريب: ${request}\nالمتطلبات: ${message}`
-      );
-
-    const phone = "966535061603";
-    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
-    window.open(whatsappURL, "_blank");
-  });
     </script>
 </body>
 </html>

@@ -51,7 +51,10 @@
                         العربية
                     </button>
                 </div>
-                <div>
+                <div class="profile d-flex justify-content-center mt-3 mt-lg-0">
+                  <a href="profile.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="text-center">
                     <a href="login.html"  data-ar="تسجيل الدخول" data-en="Sign In" class="signin mt-3 mt-lg-0">Sign In</a>
                 </div>
             </div>
@@ -174,8 +177,8 @@
   <div class="container">
     <div class="row g-4 justify-content-center align-items-center">
       <div class="col-lg-4">
-        <div class="">
-            <a class="logo d-flex justify-content-center align-items-center" href="index.html" aria-label="BIOCG logo">
+        <div class="d-flex justify-content-center justify-content-lg-start">
+            <a class="logo d-flex justify-content-center justify-content-lg-start align-items-center" href="index.html" aria-label="BIOCG logo">
                 <img src="images/logo.png" class="" alt="">
             </a>
         </div>
@@ -249,6 +252,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".consultation-form");
   const inputs = form.querySelectorAll("input, select, textarea");
   const labels = form.querySelectorAll("label");
@@ -256,7 +260,7 @@
   const submitBtn = form.querySelector("button[type='submit']");
   const langBtn = document.getElementById("langToggle");
 
-  let currentLang = "en";
+  let currentLang = localStorage.getItem("language") || "en";
 
   const messages = {
     en: {
@@ -325,42 +329,51 @@
     input.addEventListener("input", () => validateInput(input));
   });
 
+  function updateLanguage() {
+    localStorage.setItem("language", currentLang);
+
+    document.documentElement.setAttribute("lang", currentLang);
+    document.documentElement.setAttribute("dir", currentLang === "ar" ? "rtl" : "ltr");
+
+    labels.forEach(label => {
+      if (label.dataset[currentLang]) {
+        label.textContent = label.dataset[currentLang];
+      }
+    });
+
+    placeholders.forEach(input => {
+      if (input.dataset[currentLang]) {
+        input.placeholder = input.dataset[currentLang];
+      }
+    });
+
+    const options = form.querySelectorAll("select option");
+    options.forEach(opt => {
+      if (opt.dataset[currentLang]) {
+        opt.textContent = opt.dataset[currentLang];
+      }
+    });
+
+    const btnSpan = submitBtn.querySelector("span");
+    if (btnSpan && btnSpan.dataset[currentLang]) {
+      btnSpan.textContent = btnSpan.dataset[currentLang];
+    }
+
+    inputs.forEach((input) => {
+      if (input.classList.contains("is-invalid")) {
+        validateInput(input);
+      }
+    });
+  }
 
   if (langBtn) {
     langBtn.addEventListener("click", () => {
       currentLang = currentLang === "en" ? "ar" : "en";
-
-      labels.forEach(label => {
-        label.textContent = label.dataset[currentLang];
-      });
-
-      placeholders.forEach(input => {
-        if (input.dataset[currentLang]) {
-          input.placeholder = input.dataset[currentLang];
-        }
-      });
-
-      
-      const options = form.querySelectorAll("select option");
-      options.forEach(opt => {
-        if (opt.dataset[currentLang]) {
-          opt.textContent = opt.dataset[currentLang];
-        }
-      });
-
-     
-      const btnSpan = submitBtn.querySelector("span");
-      if (btnSpan && btnSpan.dataset[currentLang]) {
-        btnSpan.textContent = btnSpan.dataset[currentLang];
-      }
-
-      inputs.forEach((input) => {
-        if (input.classList.contains("is-invalid")) {
-          validateInput(input);
-        }
-      });
+      updateLanguage();
     });
   }
+
+  updateLanguage(); 
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -386,6 +399,7 @@
     const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
     window.open(whatsappURL, "_blank");
   });
+  })
 </script>
 </body>
 </html>

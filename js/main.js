@@ -3,6 +3,7 @@ if (performance.navigation.type === 1) {
 }
 
 let currentLanguage = localStorage.getItem('language') || 'en';
+
 const translations = {
     en: { direction: 'ltr' },
     ar: { direction: 'rtl' }
@@ -23,17 +24,22 @@ function applyStoredLanguage() {
         if (text !== null) el.textContent = text;
     });
 
+    document.querySelectorAll('input, textarea').forEach(input => {
+        const placeholderText = input.getAttribute(`data-${currentLanguage}-placeholder`);
+        if (placeholderText !== null) {
+            input.placeholder = placeholderText;
+        }
+    });
+
     document.title = currentLanguage === 'en'
         ? 'BioCG - Bioconstruction Group Limited'
         : 'BioCG - مجموعة البناء الحيوي المحدودة';
 
-    const directional = document.querySelectorAll('.text-start, .text-end');
-    directional.forEach(container => {
-        container.classList.remove('text-start', 'text-end');
-        container.classList.add(currentLanguage === 'ar' ? 'text-end' : 'text-start');
+    document.querySelectorAll('.text-start, .text-end').forEach(el => {
+        el.classList.remove('text-start', 'text-end');
+        el.classList.add(currentLanguage === 'ar' ? 'text-end' : 'text-start');
     });
 }
-
 
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
@@ -41,12 +47,16 @@ function toggleLanguage() {
     applyStoredLanguage();
     initializeSwiper(); 
     addLanguageSwitchTransition();
+
+    document.querySelectorAll('.consultation-form input, .consultation-form textarea').forEach(input => {
+        if (input.classList.contains('is-invalid')) {
+            input.dispatchEvent(new Event('input'));
+        }
+    });
 }
 
-
 function initializeSmoothScrolling() {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', function (e) {
             if (this.hash) {
                 e.preventDefault();
@@ -79,14 +89,12 @@ function updateActiveSection() {
     const sections = document.querySelectorAll('section[id]');
     const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
     let activeSection = '';
     sections.forEach(section => {
         if (scrollPos >= section.offsetTop - 100) {
             activeSection = section.getAttribute('id');
         }
     });
-
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${activeSection}`) {
@@ -107,23 +115,20 @@ function initializeLoadingAnimations() {
         rootMargin: '0px 0px -50px 0px'
     });
 
-    const elements = document.querySelectorAll('.card, .hero-text, .contact-item');
-    elements.forEach(el => {
+    document.querySelectorAll('.card, .hero-text, .contact-item').forEach(el => {
         el.classList.add('loading');
         observer.observe(el);
     });
 }
 
 function initializeCardHover() {
-    const cards = document.querySelectorAll('.project-image-container');
-    cards.forEach(card => {
+    document.querySelectorAll('.project-image-container').forEach(card => {
         card.addEventListener('mouseenter', () => card.style.transform = 'scale(1.02)');
         card.addEventListener('mouseleave', () => card.style.transform = 'scale(1)');
     });
 }
 
 function initializeLazyImages() {
-    const images = document.querySelectorAll('img[src]');
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -132,9 +137,8 @@ function initializeLazyImages() {
             }
         });
     });
-    images.forEach(img => observer.observe(img));
+    document.querySelectorAll('img[src]').forEach(img => observer.observe(img));
 }
-
 
 function addLanguageSwitchTransition() {
     const style = document.createElement('style');
@@ -143,11 +147,9 @@ function addLanguageSwitchTransition() {
     setTimeout(() => document.head.removeChild(style), 300);
 }
 
-
 let swiperInstance;
 function initializeSwiper() {
     if (swiperInstance) swiperInstance.destroy(true, true); 
-
     swiperInstance = new Swiper(".mySwiper", {
         loop: true,
         grabCursor: true,
@@ -171,10 +173,7 @@ function initializeSwiper() {
     });
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('BioCG Website Initialized');
     applyStoredLanguage();
     initializeSwiper(); 
     initializeLoadingAnimations();
@@ -188,4 +187,88 @@ document.addEventListener('DOMContentLoaded', function () {
     if (langToggle) {
         langToggle.addEventListener('click', toggleLanguage);
     }
+
+    // 🧾 Form Validation and WhatsApp
+    const form = document.querySelector(".consultation-form");
+    if (!form) return;
+
+    const inputs = form.querySelectorAll("input, textarea");
+    const submitBtn = form.querySelector("button[type='submit']");
+
+    const messages = {
+        en: {
+            required: "This field cannot be empty",
+            name: "Please enter a valid name (letters only)",
+            email: "Please enter a valid email address",
+        },
+        ar: {
+            required: "لا يمكن ترك هذا الحقل فارغًا",
+            name: "يرجى إدخال اسم صالح (أحرف فقط)",
+            email: "يرجى إدخال بريد إلكتروني صالح",
+        }
+    };
+
+    const patterns = {
+        name: /^[A-Za-z؀-ۿ ]{2,}$/,
+        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    };
+
+    function showError(input, message) {
+        removeError(input);
+        const error = document.createElement("div");
+        error.className = "text-danger mt-1 small error-message";
+        error.textContent = message;
+        input.classList.add("is-invalid");
+        input.parentElement.appendChild(error);
+    }
+
+    function removeError(input) {
+        input.classList.remove("is-invalid");
+        const existing = input.parentElement.querySelector(".error-message");
+        if (existing) existing.remove();
+    }
+
+    function validateInput(input) {
+        const name = input.name;
+        const value = input.value.trim();
+        if (value === "") {
+            showError(input, messages[currentLanguage].required);
+            return false;
+        }
+        if (name === "name" && !patterns.name.test(value)) {
+            showError(input, messages[currentLanguage].name);
+            return false;
+        }
+        if (name === "email" && !patterns.email.test(value)) {
+            showError(input, messages[currentLanguage].email);
+            return false;
+        }
+        removeError(input);
+        return true;
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener("input", () => validateInput(input));
+    });
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let isValid = true;
+        inputs.forEach(input => {
+            if (!validateInput(input)) isValid = false;
+        });
+        if (!isValid) return;
+
+        const name = form.querySelector('[name="name"]').value.trim();
+        const email = form.querySelector('[name="email"]').value.trim();
+        const message = form.querySelector('[name="message"]').value.trim();
+
+        const text = currentLanguage === "en"
+            ? `New Technology Consultation:\nName: ${name}\nEmail: ${email}\nProject Details: ${message}`
+            : `استشارة تكنولوجية جديدة:\nالاسم: ${name}\nالبريد الإلكتروني: ${email}\nتفاصيل المشروع: ${message}`;
+
+        const phone = "966535061603";
+        const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        window.open(whatsappURL, "_blank");
+    });
 });
