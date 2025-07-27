@@ -12,7 +12,10 @@
 
     <section class="auth py-5">
         <div class="container">
-            <div class="d-flex justify-content-end mb-3">
+            <div class="d-flex justify-content-between mb-3">
+              <div>
+                      <a data-ar="العوده الي الرئيسية" data-en="Back To Home" class="btn btn-back-to-home" href="index.html">Back To Home</a>
+                    </div>
                  <button class="btn btn-outline-light translate-btn btn-sm me-2"  id="langToggle">
                         العربية
                     </button>
@@ -39,12 +42,9 @@
                                     <div class="">
                                         <label for="userName" data-ar="اسم المستخدم" data-en="UserName">UserName</label>
                                         <input class="w-100" type="text" id="loginUserName" name="userName"  placeholder="enter your username"
-                                          data-placeholder-en="enter your username"
-                                          data-placeholder-ar="ادخل اسم المستخدم"
+                                          data-en-placeholder="enter your username"
+                                          data-ar-placeholder="ادخل اسم المستخدم"
                                         >
-                                        <div>
-                                            <p class="error-msg p-2"></p>
-                                        </div>
                                     </div>
                                     
 
@@ -52,12 +52,9 @@
                                 <div class="co-12">
                                     <div class="password-field position-relative">
                                         <label for="password" data-ar="الرقم السري" data-en="Password">Password</label>
-                                        <input class="w-100" type="password" id="loginPassword" name="password" placeholder="enter your password" data-placeholder-en="enter your password"
-                                          data-placeholder-ar="ادخل الرقم السري">
+                                        <input class="w-100" type="password" id="loginPassword" name="password" placeholder="enter your password" data-en-placeholder="enter your password"
+                                          data-ar-placeholder="ادخل الرقم السري">
                                         <i class="fas fa-eye toggle-password" data-input="loginPassword"></i>
-                                        <div>
-                                        <p class="error-msg"></p>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -87,50 +84,48 @@
 
                             <div class="co-12">
                                 <label for="userName" data-ar="الاسم" data-en="UserName">UserName</label>
-                                <input class="w-100" type="text" id="userName" name="userName" placeholder="Enter your name" data-placeholder-en="Enter your name"
-                                          data-placeholder-ar="ادخل اسم المستخدم">
-                                <p class="error-msg"></p>
+                                <input class="w-100" type="text" id="userName" name="userName" placeholder="Enter your name" data-en-placeholder="Enter your name"
+                                          data-ar-placeholder="ادخل اسم المستخدم">
                             </div>
                             <div class="co-12">
                                 <label for="mail" data-ar="البريد الالكتروني" data-en="E-mail">E-mail</label>
-                                <input class="w-100" type="email" id="mail" name="userName" placeholder="Enter your email" data-placeholder-en="Enter your email"
-                                          data-placeholder-ar="ادخل البريد الالكتروني">
-                                <p class="error-msg"></p>
+                                <input class="w-100" type="email" id="mail" name="userName" placeholder="Enter your email" data-en-placeholder="Enter your email"
+                                          data-ar-placeholder="ادخل البريد الالكتروني">
                             </div>
 
                             <div class="co-12">
                                 <div class="password-field position-relative">
                                     <label for="password" data-ar="الرقم السري" data-en="Password">Password</label>
-                                    <input class="w-100" type="password" id="password" name="password" data-placeholder-en="Enter your Password"
-                                          data-placeholder-ar="ادخل الرقم السري" placeholder="Enter your Password">
+                                    <input class="w-100" type="password" id="password" name="password" data-en-placeholder="Enter your Password"
+                                          data-ar-placeholder="ادخل الرقم السري" placeholder="Enter your Password">
                                     <i class="fas fa-eye toggle-password" data-input="password"></i>
-                                    <p class="error-msg position-static"></p>
+  
                                 </div>
                             </div>
 
                             <div class="co-12">
                                 <div class="password-field position-relative">
                                     <label for="confirmPassword" data-ar="تأكيد الرقم السري" data-en="Confirm your Password">Confirm your Password</label>
-                                    <input class="w-100" type="password" id="confirmPassword" name="confirm-Password" data-placeholder-en="Confirm your Password"
-                                          data-placeholder-ar="تأكيد الرقم السري"  placeholder="Confirm your Password">
+                                    <input class="w-100" type="password" id="confirmPassword" name="confirm-Password" data-en-placeholder="Confirm your Password"
+                                          data-ar-placeholder="تأكيد الرقم السري"  placeholder="Confirm your Password">
                                     <i class="fas fa-eye toggle-password" data-input="confirmPassword"></i>
-                                    <p class="error-msg position-static"></p>
+  
                                 </div>
                             </div>
                             <div class="co-12">
                                 <div class="">
                                     <label for="phone" data-ar="رقم التليفون" data-en="Your phone"> Your phone</label>
-                                    <input class="w-100 phone" type="tel" id="phone" name="phone" data-placeholder-en="Enter your phone"
-                                          data-placeholder-ar="ادخل رقم التليفون"  placeholder="Enter your phone">
-                                    <p class="error-msg position-static"></p>
+                                    <input class="w-100 phone" type="tel" id="phone" name="phone" data-en-placeholder="Enter your phone"
+                                          data-ar-placeholder="ادخل رقم التليفون"  placeholder="Enter your phone">
+  
                                 </div>
                             </div>
                             <div class="co-12">
                                 <div class="">
                                     <label for="address" data-ar="العنوان" data-en="Your address"> Your address</label>
-                                    <textarea class="w-100" type="text" id="address" name="address" data-placeholder-en="Enter your Addrees"
-                                          data-placeholder-ar="ادخل العنوان"  placeholder="Enter your Addrees"></textarea>
-                                    <p class="error-msg position-static text-danger"></p>
+                                    <textarea class="w-100" type="text" id="address" name="address" data-en-placeholder="Enter your Addrees"
+                                          data-ar-placeholder="ادخل العنوان"  placeholder="Enter your Addrees"></textarea>
+  
                                 </div>
                             </div>
 
@@ -156,6 +151,7 @@
 
          <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/login.js"></script>
 
 </body>
